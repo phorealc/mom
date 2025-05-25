@@ -58,3 +58,10 @@ button#loveBtn:hover {
     opacity: 0;
   }
 }
+.poeme {
+  margin-top: 20px;
+  font-style: italic;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
