@@ -2,22 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Bonne fête Maman !</title>
+  <title>Bonne fête des mères !</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Bonne fête Maman ! 🌸</h1>
-    <p>Maman, lumière de mes matins,<br>
-       Douce étoile sur mon chemin.<br>
-       Ton amour berce mes saisons,<br>
-       Comme un refrain, une chanson.</p>
+    <h1>Bonne fête des mères !</h1>
 
-    <p>Dans ton regard, je me sens fort,<br>
-       À tes côtés, plus rien n’est trop.<br>
-       Merci pour tout, pour chaque jour,<br>
-       Je t’aime d’un infini amour. 💖</p>
-    
+    <p>À la plus merveilleuse des mamans</p>
+
     <p>
       Merci Maman pour tout ce que tu fais tous les jours, je t'aime.<br>
       J'espère que tu es fière de moi.<br>
@@ -25,8 +18,18 @@
       Je t’aime très fort ! 💖
     </p>
 
+    <hr style="margin: 20px 0; border-color: white;">
+
+    <p>
+      Maman, tu es une source infinie d’amour, de douceur et de joie.<br>
+      Merci pour tout ce que tu fais chaque jour.<br>
+      Je t’aime très fort ! 💖
+    </p>
+
+    <button id="loveBtn">💝 Clique ici maman 💝</button>
+
     <footer>
-      <p>© 2025 Fête des Mères — Avec tout mon amour 💐</p>
+      <p>© 2025 Fête des Mères — Créé avec amour 🌸</p>
     </footer>
   </div>
 
@@ -34,5 +37,21 @@
     <source src="flower-dance-15177.mp3" type="audio/mpeg">
     Ton navigateur ne supporte pas l’audio.
   </audio>
+
+  <script>
+    const btn = document.getElementById('loveBtn');
+
+    btn.addEventListener('click', () => {
+      for (let i = 0; i < 30; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw';
+        heart.style.animationDuration = 2 + Math.random() * 2 + 's';
+        heart.innerText = '💖';
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 4000);
+      }
+    });
+  </script>
 </body>
 </html>
