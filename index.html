@@ -52,20 +52,22 @@
     Ton navigateur ne supporte pas l’audio.
   </audio>
 
-  <script>
-    const btn = document.getElementById('loveBtn');
+ <script>
+  const btn = document.getElementById('loveBtn');
 
-    btn.addEventListener('click', () => {
-      for (let i = 0; i < 30; i++) {
-        const heart = document.createElement('div');
-        heart.className = 'heart';
-        heart.style.left = Math.random() * 100 + 'vw';
-        heart.style.animationDuration = 2 + Math.random() * 2 + 's';
-        heart.innerText = '💖';
-        document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 4000);
-      }
-    });
-  </script>
+  btn.addEventListener('click', () => {
+    for (let i = 0; i < 50; i++) {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerText = '💖';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.top = Math.random() * 100 + 'vh';
+      heart.style.fontSize = (Math.random() * 20 + 20) + 'px';
+      heart.style.animationDuration = (1 + Math.random() * 2) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 3000);
+    }
+  });
+</script>
 </body>
 </html>
